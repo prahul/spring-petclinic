@@ -1,7 +1,18 @@
 # Getting Started
 
 ### Spring Boot Pet Clinic app
-### Prerequisites
+### Deliverables
+* GitHub repo
+  * https://github.com/prahul/spring-petclinic
+* Jenkinsfile within that repo
+  * Please refer to the Jenkinsfile at the root of the project
+* Docker file within that repo
+  * Please refer to the Dockerfile at the root of the project
+* readme.md file
+* Runnable docker image
+  * Please pull the image using the following commad..
+    * $ docker pull rahulpriyadarshi/spring-petclinic:0.1
+### Prerequisites to run the app
 * Install Docker: https://docs.docker.com/desktop/mac/install/
 * Install Jenkins: https://www.jenkins.io/download/
 * Install Intellij community: https://www.jetbrains.com/idea/download/#section=mac
@@ -29,14 +40,19 @@
     * **Branched to build/Branch Specifier** : */main
     * **Script path**: Jenkinsfile
   * Save the configurations
-  * Click on **Build Now** and your pipeline stages will build. The srages will look like below.
+  * Click on **Build Now** and your pipeline stages will build. The stages will look like below.
   ![img_1.png](img_1.png)
 ### Pushing image to artifactory
 * Create an artifactory cloud account
 * $ docker login <server-name>.jfrog.io
 * $ docker tag spring-petclinic <server-name>/spring-petclinic
 * $ docker push <server-name>.jfrog.io/spring-petclinic
+### Pushing image to DockerHub
+* $ docker login
+* $ docker tag spring-petclinic rahulpriyadarshi/spring-petclinic:0.1
+* $ docker push rahulpriyadarshi/spring-petclinic:0.1
 ### Improvements
 * Create a start.sh script which will do all the setup without any manual work
 * Add gradle plugin to create the docker image from Jenkins pipeline
 * Add gradle plugin to push the image to artifactory
+* Additional automation/compliance checks in the pipeline
