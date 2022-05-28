@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
-            agent { dockerfile true }
+            agent docker
             steps {
                 sh 'docker build -t spring-petclinic .'
             }
