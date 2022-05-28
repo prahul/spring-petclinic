@@ -29,4 +29,9 @@
     * **Branched to build/Branch Specifier** : */main
     * **Script path**: Jenkinsfile
   * Save the configurations
-  * Click on **Build Now** and your pipeline stages will build
+  * Click on **Build Now** and your pipeline stages will build. The srages will look like below.
+  ![img.png](img.png)
+### Improvements
+* Create a start.sh script which will do all the setup without any manual work
+* Add gradle plugin to create the docker image from Jenkins pipeline
+* Add gradle plugin to push the image to artifactory
