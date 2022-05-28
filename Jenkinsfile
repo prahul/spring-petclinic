@@ -14,11 +14,11 @@ pipeline {
                 sh './gradlew test'
             }
         }
-//         stage('Build Docker Image') {
-//             steps {
-//                 sh 'gradle docker'
-//             }
-//         }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t spring-petclinic .'
+            }
+        }
 //         stage('Run Docker Image') {
 //             steps {
 //                 sh 'gradle dockerRun'
