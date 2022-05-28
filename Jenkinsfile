@@ -14,15 +14,14 @@ pipeline {
                 sh './gradlew test'
             }
         }
-        stage('Build Docker Image') {
-            agent docker
-            steps {
-                sh 'docker build -t spring-petclinic .'
-            }
-        }
-//         stage('Run Docker Image') {
+//         stage('Build Docker Image') {
 //             steps {
-//                 sh 'gradle dockerRun'
+//                 sh './gradlew docker'
+//             }
+//         }
+//         stage('Push image to artifactory') {
+//             steps {
+//                 sh './gradle artifactory'
 //             }
 //         }
     }

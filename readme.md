@@ -17,3 +17,16 @@
 * Run the app
   * $ docker run -p 8080:8080 spring-petclinic
   * Open a browser: http://localhost:8080
+### Configure and run Jenkins pipeline
+* Login to Jenkins. Make sure no other app is running on port 8080
+  * http://localhost:8080
+  * Go to Dashboard -> New Item
+    * Give a name to your app "spring-petclinic"
+  * Select Pipeline
+    * **Definition**: Pipeline Script from SCM
+    * **SCM**: Git
+    * **Repositories/Repository URL** : https://github.com/prahul/spring-petclinic
+    * **Branched to build/Branch Specifier** : */main
+    * **Script path**: Jenkinsfile
+  * Save the configurations
+  * Click on **Build Now** and your pipeline stages will build
