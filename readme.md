@@ -30,7 +30,7 @@
     * **Script path**: Jenkinsfile
   * Save the configurations
   * Click on **Build Now** and your pipeline stages will build. The srages will look like below.
-  ![img.png](img.png)
+  ![img_1.png](img_1.png)
 ### Pushing image to artifactory
 * Create an artifactory cloud account
 * $ docker login <server-name>.jfrog.io
