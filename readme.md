@@ -31,6 +31,11 @@
   * Save the configurations
   * Click on **Build Now** and your pipeline stages will build. The srages will look like below.
   ![img.png](img.png)
+### Pushing image to artifactory
+* Create an artifactory cloud account
+* $ docker login <server-name>.jfrog.io
+* $ docker tag spring-petclinic <server-name>/spring-petclinic
+* $ docker push <server-name>.jfrog.io/spring-petclinic
 ### Improvements
 * Create a start.sh script which will do all the setup without any manual work
 * Add gradle plugin to create the docker image from Jenkins pipeline

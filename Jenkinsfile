@@ -14,15 +14,15 @@ pipeline {
                 sh './gradlew test'
             }
         }
-//         stage('Build Docker Image') {
-//             steps {
-//                 sh './gradlew docker'
-//             }
-//         }
-//         stage('Push image to artifactory') {
-//             steps {
-//                 sh './gradle artifactory'
-//             }
-//         }
+        stage('Build Docker Image') {
+            steps {
+                //sh './gradlew docker'
+            }
+        }
+        stage('Push image to artifactory') {
+            steps {
+                //sh './gradle artifactory'
+            }
+        }
     }
 }
